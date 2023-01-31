@@ -1,17 +1,28 @@
+/*
+JJGoFo 31/01/2023
+
+Description of functions:
+    *push: stacks a given int data type on top of our chain
+    *pop:  quits the data on top of the chain, turns its value into a 0 in the original chain, returns the data previously popped
+    *llenarHanoi: initializes our matrix according to our input
+    *imprimirHanoi: prints on screen our implementation 
+    *torrehanoi: implementation of the algorithm to solve hanoi towers    
+*/
+
 #include<stdlib.h>
 #include<stdio.h>
 int pop(int cadena[],int size);
 void push(int cadena[],int size, int in);
-void imprimirC(int cadena[],int size); //para debuggear xd
 void llenarHanoi(int a[],int b[],int c[],int size);
 void imprimirHanoi(int a[],int b[],int c[],int size);
 void torrehanoi(int a[],int b[],int c[],int a2[],int b2[],int c2[],int size,int sizeaux);
 int main(int argc, char const *argv[])
 {
-    system("color 02");
+    //Undo next comment for changing terminal color
+    //system("color 02");
     while(1){
     int size;
-    printf("Ingrese el numero de discos a utilizar: \n");
+    printf("Input the number of disks: \n");
     scanf("%d",&size);
     int a[size],b[size],c[size];
     llenarHanoi(a,b,c,size);
